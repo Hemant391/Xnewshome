@@ -3,123 +3,138 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News Homepage</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Snap - Intro</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <header class="header">
-      <img src="assets/images/logo.svg" alt="Logo" class="logo" />
+    <header>
+      <img src="./assets/images/logo.svg" alt="snap's logo" class="logo" />
 
-      <nav id="navbar" class="nav">
-        <button id="menu-close" class="menu-button">✖</button>
-        <ul class="nav-itmes">
-          <li>Home</li>
-          <li>New</li>
-          <li>Popular</li>
-          <li>Trending</li>
-          <li>Categories</li>
+      <nav class="desktop-nav">
+        <ul class="nav">
+          <li class="nav-link">
+            <button>Features</button>
+            <ul class="dropdown-list">
+              <li class="dropdown-link">
+                <a aria-label="todo-list"
+                  ><img src="./assets/images/icon-todo.svg" />Todo List</a
+                >
+              </li>
+              <li class="dropdown-link">
+                <a><img src="./assets/images/icon-calendar.svg" />Calendar</a>
+              </li>
+              <li class="dropdown-link">
+                <a><img src="./assets/images/icon-reminders.svg" />Reminders</a>
+              </li>
+              <li class="dropdown-link">
+                <a><img src="./assets/images/icon-planning.svg" />Planning</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-link">
+            <button>Company</button>
+            <ul class="dropdown-list">
+              <li><a>History</a></li>
+              <li><a>Our Team</a></li>
+              <li><a>Blog</a></li>
+            </ul>
+          </li>
+          <li><a>Careers</a></li>
+          <li><a>About</a></li>
         </ul>
       </nav>
 
-      <button id="menu-button" class="menu-button">☰</button>
-    </header>
-
-    <main class="main-container">
-      <section class="hero-section">
-        <div class="hero-img">
-          <picture>
-            <source
-              media="(max-width: 1000px)"
-              srcset="assets/images/image-web-3-mobile.jpg"
-            />
-            <img
-              id="hero-img"
-              src="assets/images/image-web-3-mobile.jpg"
-              alt="Web 3.0"
-            />
-          </picture>
-        </div>
-
-        <div class="hero-content">
-          <div class="hero-text-block">
-            <h1 class="main-text">The Bright Future of Web 3.0?</h1>
-            <div class="hero-summary">
-              <p>
-                We dive into the next evolution of the web that claims to put
-                the power of the platforms back into the hands of the people.
-                But is it really fulfilling its promise?
-              </p>
-              <button class="read-more">Read more</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="right-block">
-        <h2 class="right-title">New</h2>
-
-        <div class="news-item news1">
-          <h3>Hydrogen VS Electric Cars</h3>
-          <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
-        </div>
-        <hr />
-
-        <div class="news-item news2">
-          <h3>The Downsides of AI Artistry</h3>
-          <p>
-            What are the possible adverse effects of on-demand AI image
-            generation?
-          </p>
-        </div>
-        <hr />
-
-        <div class="news-item news3">
-          <h3>Is VC Funding Drying Up?</h3>
-          <p>
-            Private funding by VC firms is down 50% YOY. We take a look at what
-            that means.
-          </p>
-        </div>
+      <div class="registration">
+        <button>Login</button>
+        <button>Register</button>
       </div>
 
-      <section class="second-section">
-        <div class="card">
-          <img src="assets/images/image-retro-pcs.jpg" alt="Retro PCs" />
-          <div>
-            <h1 class="card-number">01</h1>
-            <h3>Reviving Retro PCs</h3>
-            <p>What happens when old PCs are given modern upgrades?</p>
-          </div>
-        </div>
+      <img src="./assets/images/icon-menu.svg" class="open-menu" />
 
-        <div class="card">
-          <img src="assets/images/image-top-laptops.jpg" alt="Laptops" />
-          <div>
-            <h1 class="card-number">02</h1>
-            <h3>Top 10 Laptops of 2022</h3>
-            <p>Our best picks for various needs and budgets.</p>
+      <div class="overlay">
+        <img src="./assets/images/icon-close-menu.svg" class="close-menu" />
+        <nav class="mobile-nav">
+          <ul>
+            <li class="nav-link">
+              <button>Features</button>
+              <ul class="dropdown-list">
+                <li><a aria-label="todo-list">Todo List</a></li>
+                <li><a>Calendar</a></li>
+                <li><a>Reminders</a></li>
+                <li><a>Planning</a></li>
+              </ul>
+            </li>
+            <li class="nav-link">
+              <button>Company</button>
+              <ul class="dropdown-list">
+                <li><a>History</a></li>
+                <li><a>Our Team</a></li>
+                <li><a>Blog</a></li>
+              </ul>
+            </li>
+            <li><a>Careers</a></li>
+            <li><a>About</a></li>
+          </ul>
+          <div class="registration">
+            <button>Login</button>
+            <button>Register</button>
           </div>
-        </div>
+        </nav>
+      </div>
+    </header>
 
-        <div class="card">
-          <img src="assets/images/image-gaming-growth.jpg" alt="Gaming" />
-          <div>
-            <h1 class="card-number">03</h1>
-            <h3>The Growth of Gaming</h3>
-            <p>How the pandemic has sparked fresh opportunities.</p>
-          </div>
-        </div>
-      </section>
+    <main>
+      <picture>
+        <source
+          media="(min-width: 768px)"
+          srcset="./assets/images/image-hero-desktop.png"
+        />
+        <img src="./assets/images/image-hero-mobile.png" alt="Hero" />
+      </picture>
+      <div class="text-content">
+        <h1>Make remote work</h1>
+        <p>
+            <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+          
+        </p>
+        <button>Learn More</button>
+      </div>
+      <div class="clients">
+        <img src="./assets/images/client-databiz.svg" />
+        <img src="./assets/images/client-audiophile.svg" />
+        <img src="./assets/images/client-meet.svg" />
+        <img src="./assets/images/client-maker.svg" />
+      </div>
     </main>
 
     <footer>
-      Challenge by <a href="https://www.crio.do/" target="_blank">CrioDo</a>
-      . Coded by
-      <a href="https://github.com/yourGitHubUsername" target="_blank">Apoorva</a
-      >.
+      <div class="attribution">
+        Challenge by <a href="https://crio.do" target="_blank">Crio.do</a>.
+        Coded by <a href="#">You</a>.
+      </div>
     </footer>
 
-    <script src="index.js"></script>
+    <script>
+      // Toggle dropdowns
+      document.querySelectorAll(".nav-link button").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const parent = btn.parentElement;
+          parent.classList.toggle("link-open");
+        });
+      });
+
+      // Open/close mobile menu
+      const openMenu = document.querySelector(".open-menu");
+      const closeMenu = document.querySelector(".close-menu");
+      const overlay = document.querySelector(".overlay");
+
+      openMenu.addEventListener("click", () => {
+        overlay.classList.add("show");
+      });
+
+      closeMenu.addEventListener("click", () => {
+        overlay.classList.remove("show");
+      });
+    </script>
   </body>
 </html>
