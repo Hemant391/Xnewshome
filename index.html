@@ -3,138 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Snap - Intro</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Notifications</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <img src="./assets/images/logo.svg" alt="snap's logo" class="logo" />
-
-      <nav class="desktop-nav">
-        <ul class="nav">
-          <li class="nav-link">
-            <button>Features</button>
-            <ul class="dropdown-list">
-              <li class="dropdown-link">
-                <a aria-label="todo-list"
-                  ><img src="./assets/images/icon-todo.svg" />Todo List</a
-                >
-              </li>
-              <li class="dropdown-link">
-                <a><img src="./assets/images/icon-calendar.svg" />Calendar</a>
-              </li>
-              <li class="dropdown-link">
-                <a><img src="./assets/images/icon-reminders.svg" />Reminders</a>
-              </li>
-              <li class="dropdown-link">
-                <a><img src="./assets/images/icon-planning.svg" />Planning</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-link">
-            <button>Company</button>
-            <ul class="dropdown-list">
-              <li><a>History</a></li>
-              <li><a>Our Team</a></li>
-              <li><a>Blog</a></li>
-            </ul>
-          </li>
-          <li><a>Careers</a></li>
-          <li><a>About</a></li>
-        </ul>
-      </nav>
-
-      <div class="registration">
-        <button>Login</button>
-        <button>Register</button>
-      </div>
-
-      <img src="./assets/images/icon-menu.svg" class="open-menu" />
-
-      <div class="overlay">
-        <img src="./assets/images/icon-close-menu.svg" class="close-menu" />
-        <nav class="mobile-nav">
-          <ul>
-            <li class="nav-link">
-              <button>Features</button>
-              <ul class="dropdown-list">
-                <li><a aria-label="todo-list">Todo List</a></li>
-                <li><a>Calendar</a></li>
-                <li><a>Reminders</a></li>
-                <li><a>Planning</a></li>
-              </ul>
-            </li>
-            <li class="nav-link">
-              <button>Company</button>
-              <ul class="dropdown-list">
-                <li><a>History</a></li>
-                <li><a>Our Team</a></li>
-                <li><a>Blog</a></li>
-              </ul>
-            </li>
-            <li><a>Careers</a></li>
-            <li><a>About</a></li>
-          </ul>
-          <div class="registration">
-            <button>Login</button>
-            <button>Register</button>
-          </div>
-        </nav>
-      </div>
-    </header>
-
     <main>
-      <picture>
-        <source
-          media="(min-width: 768px)"
-          srcset="./assets/images/image-hero-desktop.png"
-        />
-        <img src="./assets/images/image-hero-mobile.png" alt="Hero" />
-      </picture>
-      <div class="text-content">
-        <h1>Make remote work</h1>
-        <p>
-            <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
-          
-        </p>
-        <button>Learn More</button>
-      </div>
-      <div class="clients">
-        <img src="./assets/images/client-databiz.svg" />
-        <img src="./assets/images/client-audiophile.svg" />
-        <img src="./assets/images/client-meet.svg" />
-        <img src="./assets/images/client-maker.svg" />
-      </div>
+      <header>
+        <h1>Notifications <span class="notifications-counter">3</span></h1>
+        <button class="mark-all-button">Mark all as read</button>
+      </header>
+
+      <ul id="list">
+        <!-- JS will populate notifications here -->
+      </ul>
     </main>
+    <footer>Challenge by Crio.Do. Coded by Ketan Makode.</footer>
 
-    <footer>
-      <div class="attribution">
-        Challenge by <a href="https://crio.do" target="_blank">Crio.do</a>.
-        Coded by <a href="#">You</a>.
-      </div>
-    </footer>
-
-    <script>
-      // Toggle dropdowns
-      document.querySelectorAll(".nav-link button").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const parent = btn.parentElement;
-          parent.classList.toggle("link-open");
-        });
-      });
-
-      // Open/close mobile menu
-      const openMenu = document.querySelector(".open-menu");
-      const closeMenu = document.querySelector(".close-menu");
-      const overlay = document.querySelector(".overlay");
-
-      openMenu.addEventListener("click", () => {
-        overlay.classList.add("show");
-      });
-
-      closeMenu.addEventListener("click", () => {
-        overlay.classList.remove("show");
-      });
-    </script>
+    <script src="data/data.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
