@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+  height: 30px;
+}
+.nav-items ul { 
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+
+.nav-items.open {
+  display: flex;
+}
+
+
+
+
+.nav-items a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-items a:hover {
+  color: orange;
+}
+
+/* Hamburger Icon */
+#hamburger-icon {
+  display: none;
+  cursor: pointer;
+}
+
+#hamburger-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Mobile Menu */
+.menu-button {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: white;
+  height: 100vh;
+  width: 70%;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-button.active {
+  display: block;
+}
+
+.menu-button ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.menu-button ul li {
+  margin-bottom: 20px;
+}
+
+.menu-button a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+#close-menu {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+#close-menu img {
+  width: 25px;
+  height: 25px;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px;
+}
+
+.left-content {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.main-text {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.main-text h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #1a1a1a;
+  display: flex;
+  flex-direction: row;
+  white-space: pre-line;
+}
+
+.para p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.btn {
+  border: none;
+  background-color: orange;
+  color: white;
+  padding: 10px;
+  width: 120px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: darkorange;
+}
+
+/* Right Sidebar */
+.right-block {
+  flex: 1 1 30%;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+.right-block h1 {
+  font-size: 1.5rem;
+  color: orange;
+  margin-bottom: 20px;
+}
+
+.right-block h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.right-block h3:hover {
+  color: #ffcc00;
+}
+
+.right-block p {
+  font-size: 0.95rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.right-block hr {
+  border: none;
+  border-top: 1px solid #555;
+  margin-bottom: 20px;
+}
+
+/* News Cards */
+.second-section {
+  display: flex;
+  gap: 30px;
+  padding: 0 40px 40px;
+}
+
+.card {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+}
+
+.card img {
+  width: 100px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.card h3:hover {
+  color: orange;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.card-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ccc;
+}
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a {
+  text-decoration: none;
+  text-align: center;
+}
+
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+  .nav-items {
+    display: none;
+  }
+
+  #hamburger-icon {
+    display: block;
+  }
+
+  .hero-section {
+    flex-direction: column;
+  }
+
+  .main-text {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .second-section {
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+}
