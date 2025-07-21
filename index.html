@@ -1,120 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Homepage</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web 3.0 Layout</title>
-  <link rel="stylesheet" href="index.css" />
-</head>
+  <body>
+    <header class="header">
+      <img src="assets/images/logo.svg" alt="Logo" class="logo" />
 
-<body>
-  <header class="header">
-    <img src="assets/images/logo.svg" alt="Website logo" class="logo" />
+      <nav id="navbar" class="nav">
+        <button id="menu-close" class="menu-button">✖</button>
+        <ul class="nav-itmes">
+          <li>Home</li>
+          <li>New</li>
+          <li>Popular</li>
+          <li>Trending</li>
+          <li>Categories</li>
+        </ul>
+      </nav>
 
-    <nav class="nav-items">
-      <ul class="nav-items"> <!-- Fixed typo: changed 'nav-itmes' to 'nav-items' -->
-        <li><a href="#">Home</a></li>
-        <li><a href="#">New</a></li>
-        <li><a href="#">Popular</a></li>
-        <li><a href="#">Trending</a></li>
-        <li><a href="#">Categories</a></li>
-      </ul>
-    </nav>
-    <div id="hamburger-icon">
-      <img src="assets/images/icon-menu.svg" alt="Open menu" />
-    </div>
-  </header>
+      <button id="menu-button" class="menu-button">☰</button>
+    </header>
 
-  <div id="menu-button" class="menu-button">
-    <div id="menu-close">
-      <img src="assets/images/icon-menu-close.svg" alt="Close menu" />
-    </div>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">New</a></li>
-      <li><a href="#">Popular</a></li>
-      <li><a href="#">Trending</a></li>
-      <li><a href="#">Categories</a></li>
-    </ul>
-  </div>
-
-  <main>
-    <section class="hero-section">
-      <div class="left-content">
+    <main class="main-container">
+      <section class="hero-section">
         <div class="hero-img">
           <picture>
-            <source media="(max-width: 999px)" srcset="assets/images/image-web-3-mobile.jpg" />
-            <img src="assets/images/image-web-3-desktop.jpg" alt="Web 3.0 Illustration" />
+            <source
+              media="(max-width: 1000px)"
+              srcset="assets/images/image-web-3-mobile.jpg"
+            />
+            <img
+              id="hero-img"
+              src="assets/images/image-web-3-mobile.jpg"
+              alt="Web 3.0"
+            />
           </picture>
         </div>
-        <div class="main-text">
-          <h1>The Bright Future of Web 3.0?</h1>
-          <div class="para">
-            <p>
-              We dive into the next evolution of the web that<br>
-              claims to put the power of the platforms back<br>
-              into the hands of the people. But is it really<br>
-              fulfilling its promise?
-            </p>
-            <button class="btn">Read more</button>
+
+        <div class="hero-content">
+          <div class="hero-text-block">
+            <h1 class="main-text">The Bright Future of Web 3.0?</h1>
+            <div class="hero-summary">
+              <p>
+                We dive into the next evolution of the web that claims to put
+                the power of the platforms back into the hands of the people.
+                But is it really fulfilling its promise?
+              </p>
+              <button class="read-more">Read more</button>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <aside class="right-block">
-        <h1>New</h1>
-        <div class="news1">
+      <div class="right-block">
+        <h2 class="right-title">New</h2>
+
+        <div class="news-item news1">
           <h3>Hydrogen VS Electric Cars</h3>
           <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
-          <hr />
         </div>
-        <div class="news2">
+        <hr />
+
+        <div class="news-item news2">
           <h3>The Downsides of AI Artistry</h3>
-          <p>What are the possible adverse effects of on-demand AI image generation?</p>
-          <hr />
+          <p>
+            What are the possible adverse effects of on-demand AI image
+            generation?
+          </p>
         </div>
-        <div class="news3">
+        <hr />
+
+        <div class="news-item news3">
           <h3>Is VC Funding Drying Up?</h3>
-          <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
-        </div>
-      </aside>
-    </section>
-
-    <section class="second-section">
-      <div class="card">
-        <img src="assets/images/image-retro-pcs.jpg" alt="Retro PC" />
-        <div class="card-content">
-          <span class="card-number">01</span>
-          <h3>Reviving Retro PCs</h3>
-          <p>What happens when old PCs are given modern upgrades?</p>
+          <p>
+            Private funding by VC firms is down 50% YOY. We take a look at what
+            that means.
+          </p>
         </div>
       </div>
-      <div class="card">
-        <img src="assets/images/image-top-laptops.jpg" alt="Laptop" />
-        <div class="card-content">
-          <span class="card-number">02</span>
-          <h3>Top 10 Laptops of 2022</h3>
-          <p>Our best picks for various needs and budgets.</p>
+
+      <section class="second-section">
+        <div class="card">
+          <img src="assets/images/image-retro-pcs.jpg" alt="Retro PCs" />
+          <div>
+            <h1 class="card-number">01</h1>
+            <h3>Reviving Retro PCs</h3>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="assets/images/image-gaming-growth.jpg" alt="Gaming controller" />
-        <div class="card-content">
-          <span class="card-number">03</span>
-          <h3>The Growth of Gaming</h3>
-          <p>How the pandemic has sparked fresh opportunities.</p>
+
+        <div class="card">
+          <img src="assets/images/image-top-laptops.jpg" alt="Laptops" />
+          <div>
+            <h1 class="card-number">02</h1>
+            <h3>Top 10 Laptops of 2022</h3>
+            <p>Our best picks for various needs and budgets.</p>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
 
-  <footer class="footer">
-    Challenge by <a href="https://www.crio.do/" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https://github.com/darshann345" target="_blank">Darshan N</a>.
-  </footer>
+        <div class="card">
+          <img src="assets/images/image-gaming-growth.jpg" alt="Gaming" />
+          <div>
+            <h1 class="card-number">03</h1>
+            <h3>The Growth of Gaming</h3>
+            <p>How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </div>
+      </section>
+    </main>
 
-  <script src="index.js" defer></script>
-</body>
+    <footer>
+      Challenge by <a href="https://www.crio.do/" target="_blank">CrioDo</a>
+      . Coded by
+      <a href="https://github.com/yourGitHubUsername" target="_blank">Apoorva</a
+      >.
+    </footer>
 
+    <script src="index.js"></script>
+  </body>
 </html>

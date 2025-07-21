@@ -1,11 +1,11 @@
-const hamburger = document.getElementById('hamburger-icon');
-const closeMenu = document.getElementById('menu-close');
-const nav = document.querySelector('.nav-items');
+const menuButton = document.getElementById('menu-button');
+const closeButton = document.getElementById('menu-close');
+const navbar = document.getElementById('navbar');
 
-hamburger.addEventListener('click', () => {
-  nav.classList.add('open');
+menuButton.addEventListener('click', () => {
+  navbar.classList.add('open');
 });
 
-closeMenu.addEventListener('click', () => {
-  nav.classList.remove('open');
+closeButton.addEventListener('click', () => {
+  navbar.classList.remove('open');
 });
